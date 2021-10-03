@@ -1,0 +1,13 @@
+{
+  "chromeWebSecurity": false,
+  "firefoxGcInterval": { "runMode": 1, "openMode": null },
+  "pluginsFile": false,
+  "screenshotOnRunFailure": false,
+  "pageLoadConfig": 12000,
+  "pageLoadTimeout": 120000,
+  "requestTimeout": 10000,
+  "responseTimeout": 30000,
+  "videoCompression": 32,
+  "videosFolder": "cypress/videos",
+  "video": false
+}
