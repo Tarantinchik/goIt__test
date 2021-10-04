@@ -9,13 +9,11 @@ context('CreateCourse', () => {
     })
 
     it('.create course by API', () => {
-        let schoolId = cy.getSchoolIdByNameByAPI(schoolName);
-        cy.log(schoolId);
-        cy.createCourseByAPI(courseName, 'courseImage.jpg', schoolId).then(schoolId => {
-            cy.log(schoolId);
-        })
+        cy.getSchoolIdByNameByAPI(schoolName).then(schoolId => {
+            cy.createCourseByAPI(courseName, 'https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png', schoolId)
         });
     });
-    afterEach(() => {
-        // cy.logout();
-    });
+});
+afterEach(() => {
+    // cy.logout();
+});

@@ -74,6 +74,6 @@ Cypress.Commands.add('createCourse', (accessToken, name, imageLink, schoolId) =>
             schoolId: schoolId
         }
     }).then(response => {
-        return response.body;
+        return response.body.courseId;
     });
 })

@@ -14,6 +14,12 @@ Cypress.Commands.add('login', (login = '', password = '', sizeX, sizeY) => {
     }
 });
 
+Cypress.Commands.add('addInformationAboutSchool', (schoolName) => {
+    // cy.get('input[name="searchbox"]').clear().type(schoolName);
+    cy.findByText(schoolName).click();
+
+});
+
 Cypress.Commands.add('logout', () => {
     cy.wait(5000);
     cy.get('a[href="/profile"]').click();
@@ -83,13 +89,12 @@ Cypress.Commands.add('getSchoolIdByNameByAPI', name => {
             return schoolId;
         })
     })
-})
+});
 
 Cypress.Commands.add('createCourseByAPI', (name, imageLink, schoolId) => {
     cy.getTokenByAPI().then(accessToken => {
         cy.createCourse(accessToken, name, imageLink, schoolId).then(item => {
             cy.log(item)
-            })
-            // return schoolId;
         })
-    });
+    })
+});
