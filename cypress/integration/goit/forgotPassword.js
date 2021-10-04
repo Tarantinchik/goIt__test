@@ -14,6 +14,7 @@ context('Actions', () => {
         cy.get('button[type="submit"]').click();
         cy.findByText('Проверьте почту').should('be.visible');
         cy.get('div[id="__next"]').should('contain','pinchuk.dap@gmail.com');
+        cy.get('[id="__next"]').should('contain','pinchuk.dap@gmail.com');
     });
 
 })

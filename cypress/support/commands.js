@@ -14,6 +14,12 @@ Cypress.Commands.add('login', (login = '', password = '', sizeX, sizeY) => {
     }
 });
 
+Cypress.Commands.add('openPasswordRestore', (sizeX, sizeY) => {
+    cy.viewport(sizeX, sizeY);
+    cy.visit('https://goit-lms-staging.vercel.app/account/password/restore');
+
+})
+
 Cypress.Commands.add('addInformationAboutSchool', (schoolName) => {
     // cy.get('input[name="searchbox"]').clear().type(schoolName);
     cy.findByText(schoolName).click();
