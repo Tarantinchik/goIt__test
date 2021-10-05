@@ -26,6 +26,16 @@ Cypress.Commands.add('openLoginAccountPage', (sizeX, sizeY) => {
 
 })
 
+Cypress.Commands.add('changeAccountPage', (userName, userPassword) => {
+
+    cy.get('#user_email').type(userName );
+    cy.get('#user_password').type(userPassword);
+    cy.get('button[type="submit"]').should('have.text', 'Войти').click();
+    cy.get('a[href="/profile"]').click();
+    cy.findByText('Выйти').click();
+
+})
+
 Cypress.Commands.add('addInformationAboutSchool', (schoolName) => {
     // cy.get('input[name="searchbox"]').clear().type(schoolName);
     cy.findByText(schoolName).click();

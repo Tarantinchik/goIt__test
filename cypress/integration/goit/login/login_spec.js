@@ -17,6 +17,7 @@ import '../../../support/commands'
  * 2.
  * 3.
  */
+const password = 'dmss111278DAP!!!';
 
 context('', () => {
     beforeEach(() => {
@@ -35,7 +36,6 @@ context('', () => {
 
     })
 
-
 });
 context('', () => {
     beforeEach(() => {
@@ -48,9 +48,99 @@ context('', () => {
          cy.get('div[label="Пароль"]').parent().find('span').eq(1).should('have.text', 'Введи пароль, чтобы продолжить');
 
     });
-    // cy.get('label[for="user_password"]').should('have.text','Введи пароль, чтобы продолжить');
+
+});
+
+context('', () => {
+    beforeEach(() => {
+        cy.openLoginAccountPage(1280, 720);
+        cy.wait(3000);
+    });
+
+    it('', () => {
+        cy.changeAccountPage('pinchuk.dap@gmail.com', password);
+        cy.changeAccountPage('380971344443@qa.team', password);
+        cy.changeAccountPage('77777_Chm@qa.team', password);
+        cy.changeAccountPage('77777_Mentor@qa.team', password);
+        cy.changeAccountPage('77777_tutor@qa.team', password);
+        cy.changeAccountPage('005_pin2@qa.team', password);
+
+    })
+
+});
+
+context('', () => {
+    beforeEach(() => {
+        cy.openLoginAccountPage(1280, 720);
+    });
+
+    it('', () => {
+
+        cy.get('#user_email').type('unknown_user@test.test');
+        cy.get('#user_password').type('dmss111278DAP!!!');
+        cy.get('button[type="submit"]').click();
+        cy.get('div[role="status"]').should('have.text','Передан неправильный логин или пароль');
+    })
+
+});
 
 
+context('', () => {
+    beforeEach(() => {
+        cy.openLoginAccountPage(1280, 720);
+    });
 
+    it('', () => {
+
+        cy.get('#user_email').type('pinchuk.dap@gmail.com');
+        cy.get('#user_password').type('dmss111278DAP@@@');
+        cy.get('button[type="submit"]').click();
+        cy.get('div[role="status"]').should('have.text','Передан неправильный логин или пароль');
+    })
+
+});
+
+
+context('', () => {
+    beforeEach(() => {
+        cy.openLoginAccountPage(1280, 720);
+    });
+
+    it('', () => {
+        cy.get('#user_email').type('pinchuk.dap@gmail.com');
+        cy.get('#user_password').type(' ');
+        cy.get('button[type="submit"]').click();
+        cy.get('div[label="Пароль"]').parent().find('span').eq(1).should('have.text', 'Введи пароль, чтобы продолжить');
+
+    })
+
+});
+
+context('', () => {
+    beforeEach(() => {
+        cy.openLoginAccountPage(1280, 720);
+    });
+
+    it('', () => {
+        cy.get('#user_email').type('email....!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!...500symbols@gmail.com');
+        cy.get('#user_password').type('password_500_symbols$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
+        cy.get('button[type="submit"]').click();
+        cy.get('div[role="status"]').should('have.text','Передан неправильный логин или пароль');
+
+    })
+
+});
+
+context('', () => {
+    beforeEach(() => {
+        cy.openLoginAccountPage(1280, 720);
+    });
+
+    it('', () => {
+        cy.get('#user_email').type('pinchuk.dap@gmail.com');
+        cy.get('#user_password').type('dmss111278DAP!!!');
+        cy.get('path[fill-rule="evenodd"]').click();
+
+    })
 
 });
