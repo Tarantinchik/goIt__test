@@ -53,7 +53,6 @@ context('', () => {
     });
 
     it('', () => {
-
         cy.get('#__next').contains('Упс');
         cy.get('#__next').contains('К сожалению нет возможности работать в Learning Management System (LMS) используя монитор с шириной мешьше');
         cy.get('#__next').contains('Перейти на ');
