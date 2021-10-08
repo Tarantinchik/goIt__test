@@ -87,11 +87,11 @@ context('', () => {
         cy.get(selLogin.inputEmail).type('pinchuk.dap@gmail.com');
         cy.get(selLogin.inputPassword).type('dmss111278DAP!!!');
         cy.get(selLogin.btnEye).click();
-        cy.get(selLogin.inputPassword).should('')
+        // cy.get(selLogin.inputPassword).should('')
     })
 
     it('', () => {
-        cy.get('a[href="/account/password/restore"]').should('have.text', 'Не помню пароль').click();
+        cy.get(selLogin.linkForgetPassword).should('have.text', 'Не помню пароль').click();
 
     })
 

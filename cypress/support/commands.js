@@ -2,14 +2,15 @@ import '@testing-library/cypress/add-commands';
 import 'cypress-file-upload';
 import '../support/api/auth_api';
 import '../support/api/schools_api';
+import selLogin from '../selectors/login/login_sel.json';
 
 Cypress.Commands.add('login', (login = '', password = '', sizeX, sizeY) => {
     cy.viewport(sizeX, sizeY);
     cy.visit('https://goit-lms-staging.vercel.app/');
     if (login !== '' && password !== '') {
-        cy.get('#user_email').clear().type(login);
-        cy.get('#user_password').clear().type(password);
-        cy.get('button[type="submit"]').click();
+        cy.get(selLogin.inputEmail).clear().type(login);
+        cy.get(selLogin.inputPassword).clear().type(password);
+        cy.get(selLogin.btnEnter).click();
         cy.wait(5000);
     }
 });
@@ -28,9 +29,9 @@ Cypress.Commands.add('openLoginAccountPage', (sizeX, sizeY) => {
 
 Cypress.Commands.add('changeAccountPage', (userName, userPassword) => {
 
-    cy.get('#user_email').type(userName );
-    cy.get('#user_password').type(userPassword);
-    cy.get('button[type="submit"]').should('have.text', 'Войти').click();
+    cy.get(selLogin.inputEmail).type(userName );
+    cy.get(selLogin.inputPassword).type(userPassword);
+    cy.get(selLogin.btnEnter).should('have.text', 'Войти').click();
     cy.get('a[href="/profile"]').click();
     cy.findByText('Выйти').click();
 

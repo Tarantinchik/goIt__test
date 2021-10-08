@@ -20,59 +20,43 @@ import '../../../support/commands'
 context('', () => {
     beforeEach(() => {
         cy.openPasswordRestore(1280, 720);
+    });
+
+    it('', () => {
+        cy.findByText('Забыли пароль?').should('be.visible');
+        cy.get('#__next').contains('Ничего страшного! ');
+        cy.get('#__next').contains('Укажите электронную почту с которой вы были зарегистрированы - мы отправим вам ссылку.');
+        cy.get('label[for="user_email"]').should('have.text','Email');
+        cy.get('#user_email').should('be.visible');
+        cy.get('button[type="submit"]').should('have.text','Отправить ссылку');
+        cy.get('a[href="/account/login"]').should('have.text','Я вспомнил(а) пароль');
+    });
+
+    it('', () => {
         cy.get('#user_email').type('2123');
         cy.get('button[type="submit"]').click();
-    });
-
-    it('', () => {
         cy.get('div[role="status"]').should('be.visible');
-    })
-});
-
-context('', () => {
-    beforeEach(() => {
-        cy.openPasswordRestore(1280, 720);
     });
 
     it('', () => {
-       cy.findByText('Забыли пароль?').should('be.visible');
-       cy.get('#__next').contains('Ничего страшного! ');
-       cy.get('#__next').contains('Укажите электронную почту с которой вы были зарегистрированы - мы отправим вам ссылку.');
-       cy.get('label[for="user_email"]').should('have.text','Email');
-       cy.get('#user_email').should('be.visible');
-       cy.get('button[type="submit"]').should('have.text','Отправить ссылку');
-       cy.get('a[href="/account/login"]').should('have.text','Я вспомнил(а) пароль');
-    })
-});
-
-xcontext('', () => {
-    beforeEach(() => {
-        cy.openPasswordRestore(1280, 720);
         cy.get('#user_email').type('pinchuk.dap@gmail.com');
         cy.get('button[type="submit"]').should('have.text','Отправить ссылку').click();
-        cy.wait(4000);
-    });
-
-    it('', () => {
+        // cy.wait(6000);
         cy.get('h1').should('have.text', 'Проверьте почту');
         cy.get('p').should('contain', 'Мы отправили инструкцию и ссылку для смены пароля на почту');
         cy.get('p b').should('contain', 'pinchuk.dap@gmail.com');
+    });
 
-    })
-});
-
-xcontext('', () => {
-    beforeEach(() => {
-        cy.openPasswordRestore(1280, 720);
+    it('', () => {
         cy.get('#user_email').type('amakatyor@gmail.com');
         cy.get('button[type="submit"]').click();
-    });
-    it('', () => {
         cy.get('div[role="status"]').should('be.visible');
-    })
+    });
+
 });
 
-xcontext('', () => {
+
+context('', () => {
     beforeEach(() => {
         cy.openPasswordRestore(1050, 620);
     });
