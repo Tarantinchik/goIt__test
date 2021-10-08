@@ -9,7 +9,8 @@
  * @version 1.1
  */
 
-import '../../../support/commands'
+import '../../../support/commands';
+import selLogin from '../../../selectors/login/login_sel.json'
 
 /**
  * testList:
@@ -25,39 +26,25 @@ context('', () => {
     });
 
     it('', () => {
-        cy.findByText('Вход').should('be.visible');
-        cy.get('label[for="user_email"]').should('have.text', 'Email');
-        cy.get('label[for="user_password"]').should('have.text', 'Пароль');
-        cy.get('#user_email').should('be.visible');
-        cy.get('#user_password').should('be.visible');
-        cy.get('button[type="button"]').should('be.visible');
-        cy.get('button[type="submit"]').should('have.text', 'Войти');
-        cy.get('a[href="/account/password/restore"]').should('have.text', 'Не помню пароль');
-
+        cy.get(selLogin.header).should('be.visible');
+        cy.get(selLogin.labelEmail).should('have.text', 'Email');
+        cy.get(selLogin.labelPassword).should('have.text', 'Пароль');
+        cy.get(selLogin.inputEmail).should('be.visible');
+        cy.get(selLogin.inputPassword).should('be.visible');
+        cy.get(selLogin.btnEye).should('be.visible');
+        cy.get(selLogin.btnEnter).should('have.text', 'Войти');
+        cy.get(selLogin.linkForgetPassword).should('have.text', 'Не помню пароль');
     })
 
-});
-context('', () => {
-    beforeEach(() => {
-        cy.openLoginAccountPage(1280, 720);
-        cy.get('button[type="submit"]').should('have.text', 'Войти').click();
+    it('', () => {
+        cy.get(selLogin.btnEnter).should('have.text', 'Войти').click();
+        cy.get(selLogin.divLabelEmail).parent().find('span').eq(1).should('have.text', 'E-mail отсутствует');
+        cy.get(selLogin.divLabelPassword).parent().find('span').eq(1).should('have.text', 'Введи пароль, чтобы продолжить');
+
     });
 
     it('', () => {
-         cy.get('div[label="Email"]').parent().find('span').eq(1).should('have.text', 'E-mail отсутствует');
-         cy.get('div[label="Пароль"]').parent().find('span').eq(1).should('have.text', 'Введи пароль, чтобы продолжить');
-
-    });
-
-});
-
-context('', () => {
-    beforeEach(() => {
-        cy.openLoginAccountPage(1280, 720);
         cy.wait(3000);
-    });
-
-    it('', () => {
         cy.changeAccountPage('pinchuk.dap@gmail.com', password);
         cy.changeAccountPage('380971344443@qa.team', password);
         cy.changeAccountPage('77777_Chm@qa.team', password);
@@ -67,80 +54,49 @@ context('', () => {
 
     })
 
-});
-
-context('', () => {
-    beforeEach(() => {
-        cy.openLoginAccountPage(1280, 720);
-    });
+    it('', () => {
+        cy.get(selLogin.inputEmail).type('unknown_user@test.test');
+        cy.get(selLogin.inputPassword).type('dmss111278DAP!!!');
+        cy.get(selLogin.btnEnter).click();
+        cy.get(selLogin.wrongLoginOrPassword).should('have.text','Передан неправильный логин или пароль');
+    })
 
     it('', () => {
+        cy.get(selLogin.inputEmail).type('pinchuk.dap@gmail.com');
+        cy.get(selLogin.inputPassword).type('dmss111278DAP@@@');
+        cy.get(selLogin.btnEnter).click();
+        cy.get(selLogin.wrongLoginOrPassword).should('have.text','Передан неправильный логин или пароль');
+    })
 
-        cy.get('#user_email').type('unknown_user@test.test');
-        cy.get('#user_password').type('dmss111278DAP!!!');
-        cy.get('button[type="submit"]').click();
-        cy.get('div[role="status"]').should('have.text','Передан неправильный логин или пароль');
+    it('', () => {
+        cy.get(selLogin.inputEmail).type('pinchuk.dap@gmail.com');
+        cy.get(selLogin.inputPassword).type(' ');
+        cy.get(selLogin.btnEnter).click();
+        cy.get(selLogin.divLabelPassword).parent().find('span').eq(1).should('have.text', 'Введи пароль, чтобы продолжить');
+
+    })
+
+    it('', () => {
+        cy.get(selLogin.inputEmail).type('email....!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!...500symbols@gmail.com');
+        cy.get(selLogin.inputPassword).type('password_500_symbols$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
+        cy.get(selLogin.btnEnter).click();
+        cy.get(selLogin.wrongLoginOrPassword).should('have.text','Передан неправильный логин или пароль');
+
+    })
+    it('', () => {
+        cy.get(selLogin.inputEmail).type('pinchuk.dap@gmail.com');
+        cy.get(selLogin.inputPassword).type('dmss111278DAP!!!');
+        cy.get(selLogin.btnEye).click();
+        cy.get(selLogin.inputPassword).should('')
+    })
+
+    it('', () => {
+        cy.get('a[href="/account/password/restore"]').should('have.text', 'Не помню пароль').click();
+
     })
 
 });
 
 
-context('', () => {
-    beforeEach(() => {
-        cy.openLoginAccountPage(1280, 720);
-    });
-
-    it('', () => {
-
-        cy.get('#user_email').type('pinchuk.dap@gmail.com');
-        cy.get('#user_password').type('dmss111278DAP@@@');
-        cy.get('button[type="submit"]').click();
-        cy.get('div[role="status"]').should('have.text','Передан неправильный логин или пароль');
-    })
-
-});
 
 
-context('', () => {
-    beforeEach(() => {
-        cy.openLoginAccountPage(1280, 720);
-    });
-
-    it('', () => {
-        cy.get('#user_email').type('pinchuk.dap@gmail.com');
-        cy.get('#user_password').type(' ');
-        cy.get('button[type="submit"]').click();
-        cy.get('div[label="Пароль"]').parent().find('span').eq(1).should('have.text', 'Введи пароль, чтобы продолжить');
-
-    })
-
-});
-
-context('', () => {
-    beforeEach(() => {
-        cy.openLoginAccountPage(1280, 720);
-    });
-
-    it('', () => {
-        cy.get('#user_email').type('email....!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!...500symbols@gmail.com');
-        cy.get('#user_password').type('password_500_symbols$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
-        cy.get('button[type="submit"]').click();
-        cy.get('div[role="status"]').should('have.text','Передан неправильный логин или пароль');
-
-    })
-
-});
-
-context('', () => {
-    beforeEach(() => {
-        cy.openLoginAccountPage(1280, 720);
-    });
-
-    it('', () => {
-        cy.get('#user_email').type('pinchuk.dap@gmail.com');
-        cy.get('#user_password').type('dmss111278DAP!!!');
-        cy.get('path[fill-rule="evenodd"]').click();
-
-    })
-
-});

@@ -1,0 +1,17 @@
+{
+  "header": "h1",
+  "wrongLoginOrPassword": "div[role='status']",
+
+  "divLabelEmail": "div[label='Email']",
+  "inputEmail": "#user_email",
+  "labelEmail": "label[for='user_email']",
+
+  "divLabelPassword": "div[label='Пароль']",
+  "inputPassword": "#user_password",
+  "labelPassword": "label[for='user_password']",
+  "btnEye": "button[type='button']",
+
+  "btnEnter": "button[type='submit']",
+  "linkForgetPassword": "a[href='/account/password/restore']"
+
+}
