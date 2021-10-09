@@ -43,16 +43,16 @@ context('', () => {
 
     });
 
-    it('', () => {
-        cy.wait(3000);
-        cy.changeAccountPage('pinchuk.dap@gmail.com', password);
-        cy.changeAccountPage('380971344443@qa.team', password);
-        cy.changeAccountPage('77777_Chm@qa.team', password);
-        cy.changeAccountPage('77777_Mentor@qa.team', password);
-        cy.changeAccountPage('77777_tutor@qa.team', password);
-        cy.changeAccountPage('005_pin2@qa.team', password);
-
-    })
+    // it('', () => {
+    //     cy.wait(3000);
+    //     cy.changeAccountPage('pinchuk.dap@gmail.com', password);
+    //     cy.changeAccountPage('380971344443@qa.team', password);
+    //     cy.changeAccountPage('77777_Chm@qa.team', password);
+    //     cy.changeAccountPage('77777_Mentor@qa.team', password);
+    //     cy.changeAccountPage('77777_tutor@qa.team', password);
+    //     cy.changeAccountPage('005_pin2@qa.team', password);
+    //
+    // })
 
     it('', () => {
         cy.get(selLogin.inputEmail).type('unknown_user@test.test');
@@ -87,7 +87,7 @@ context('', () => {
         cy.get(selLogin.inputEmail).type('pinchuk.dap@gmail.com');
         cy.get(selLogin.inputPassword).type('dmss111278DAP!!!');
         cy.get(selLogin.btnEye).click();
-        // cy.get(selLogin.inputPassword).should('')
+        cy.get(selLogin.inputPassword).invoke('attr', 'type').should('contain', 'text')
     })
 
     it('', () => {

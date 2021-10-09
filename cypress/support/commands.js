@@ -32,6 +32,7 @@ Cypress.Commands.add('changeAccountPage', (userName, userPassword) => {
     cy.get(selLogin.inputEmail).type(userName );
     cy.get(selLogin.inputPassword).type(userPassword);
     cy.get(selLogin.btnEnter).should('have.text', 'Войти').click();
+    cy.wait(5000);
     cy.get('a[href="/profile"]').click();
     cy.findByText('Выйти').click();
 

@@ -1,0 +1,14 @@
+{
+  "header": "h1",
+
+  "paragraphText": "p",
+  "labelEmail": "label[for='user_email']",
+  "inputEmail": "#user_email",
+  "sendEmailLinkButton": "button[type='submit']",
+  "iRememberMyPswdLink": "a[href='/account/login']",
+
+  "wrongLoginOrPassword": "div[role='status']",
+
+  "goItUALink": "a[href='https://goit.ua']"
+
+}
