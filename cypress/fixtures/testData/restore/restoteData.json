@@ -1,0 +1,17 @@
+{
+  "textForParagraph": "Ничего страшного! ",
+  "textForParSecond": "Укажите электронную почту с которой вы были зарегистрированы - мы отправим вам ссылку.",
+  "textEmail": "Email",
+  "sendLink": "Отправить ссылку",
+  "iRememberPswd": "Я вспомнил(а) пароль",
+  "incorrectEmail": "2123",
+  "correctEmail": "pinchuk.dap@gmail.com",
+  "checkYourEmail": "Проверьте почту",
+  "instructionForPswdChange": "Мы отправили инструкцию и ссылку для смены пароля на почту",
+  "invalidEmail": "amakatyor@gmail.com",
+  "ups": "Упс",
+  "textWithSmallScreen": "К сожалению нет возможности работать в Learning Management System (LMS) используя монитор с шириной мешьше",
+  "youHaveToGo": "Перейти на ",
+  "smallScreenLinkText": "https://goit.ua/"
+
+}

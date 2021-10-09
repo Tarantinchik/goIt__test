@@ -11,6 +11,7 @@
 
 import '../../../support/commands'
 import selRestore from '../../../selectors/selRestore/restore_sel.json'
+import testDataRes from '../../../fixtures/testData/restore/restoteData.json'
 
 /**
  * testList:
@@ -26,31 +27,31 @@ context('', () => {
 
     it('', () => {
         cy.get(selRestore.header).should('be.visible');
-        cy.get(selRestore.paragraphText).should("contain", 'Ничего страшного! ');
-        cy.get(selRestore.paragraphText).should("contain", 'Укажите электронную почту с которой вы были зарегистрированы - мы отправим вам ссылку.');
-        cy.get(selRestore.labelEmail).should('have.text','Email');
+        cy.get(selRestore.paragraphText).should("contain", testDataRes.textForParagraph);
+        cy.get(selRestore.paragraphText).should("contain", testDataRes.textForParSecond);
+        cy.get(selRestore.labelEmail).should('have.text',testDataRes.textEmail);
         cy.get(selRestore.inputEmail).should('be.visible');
-        cy.get(selRestore.sendEmailLinkButton).should('have.text','Отправить ссылку');
-        cy.get(selRestore.iRememberMyPswdLink).should('have.text','Я вспомнил(а) пароль');
+        cy.get(selRestore.sendEmailLinkButton).should('have.text',testDataRes.sendLink);
+        cy.get(selRestore.iRememberMyPswdLink).should('have.text',testDataRes.iRememberPswd);
     });
 
     it('', () => {
-        cy.get(selRestore.inputEmail).type('2123');
+        cy.get(selRestore.inputEmail).type(testDataRes.incorrectEmail);
         cy.get(selRestore.sendEmailLinkButton).click();
         cy.get(selRestore.wrongLoginOrPassword).should('be.visible');
     });
 
     it('', () => {
-        cy.get(selRestore.inputEmail).type('pinchuk.dap@gmail.com');
-        cy.get(selRestore.sendEmailLinkButton).should('have.text','Отправить ссылку').click();
+        cy.get(selRestore.inputEmail).type(testDataRes.correctEmail);
+        cy.get(selRestore.sendEmailLinkButton).should('have.text',testDataRes.sendLink).click();
         // cy.wait(6000);
-        cy.get(selRestore.header).should('have.text', 'Проверьте почту');
-        cy.get(selRestore.paragraphText).should('contain', 'Мы отправили инструкцию и ссылку для смены пароля на почту');
-        cy.get(selRestore.paragraphText).should('contain', 'pinchuk.dap@gmail.com');
+        cy.get(selRestore.header).should('have.text', testDataRes.checkYourEmail);
+        cy.get(selRestore.paragraphText).should('contain', testDataRes.instructionForPswdChange);
+        cy.get(selRestore.paragraphText).should('contain', testDataRes.correctEmail);
     });
 
     it('', () => {
-        cy.get(selRestore.inputEmail).type('amakatyor@gmail.com');
+        cy.get(selRestore.inputEmail).type(testDataRes.invalidEmail);
         cy.get(selRestore.sendEmailLinkButton).click();
         cy.get(selRestore.wrongLoginOrPassword).should('be.visible');
     });
@@ -64,9 +65,9 @@ context('', () => {
     });
 
     it('', () => {
-        cy.get(selRestore.header).should('contain','Упс');
-        cy.get(selRestore.paragraphText).should('contain','К сожалению нет возможности работать в Learning Management System (LMS) используя монитор с шириной мешьше');
-        cy.get(selRestore.paragraphText).should('contain','Перейти на ');
-        cy.get(selRestore.goItUALink).should('have.text','https://goit.ua/');
+        cy.get(selRestore.header).should('contain',testDataRes.ups);
+        cy.get(selRestore.paragraphText).should('contain',testDataRes.textWithSmallScreen);
+        cy.get(selRestore.paragraphText).should('contain',testDataRes.youHaveToGo);
+        cy.get(selRestore.goItUALink).should('have.text',testDataRes.smallScreenLinkText);
     })
 });
