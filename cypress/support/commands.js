@@ -122,3 +122,13 @@ Cypress.Commands.add('createCourseByAPI', (name, imageLink, schoolId) => {
         })
     })
 });
+
+
+Cypress.Commands.add('getCoursesListBySchoolAPI', (schoolId) => {
+    cy.getTokenByAPI().then(accessToken => {
+        cy.getCourseBySchoolId(accessToken, schoolId).then(item => {
+            cy.log(schoolId)
+            cy.log(item)
+        })
+    })
+});

@@ -11,6 +11,7 @@
 
 import '../../../support/commands';
 import selLogin from '../../../selectors/login/login_sel.json'
+import testDataLog from '../../../fixtures/testData/login/loginData.json'
 
 /**
  * testList:
@@ -55,21 +56,21 @@ context('', () => {
     // })
 
     it('', () => {
-        cy.get(selLogin.inputEmail).type('unknown_user@test.test');
-        cy.get(selLogin.inputPassword).type('dmss111278DAP!!!');
+        cy.get(selLogin.inputEmail).type(testDataLog.wrongLogin);
+        cy.get(selLogin.inputPassword).type(testDataLog.wrongPassword);
         cy.get(selLogin.btnEnter).click();
         cy.get(selLogin.wrongLoginOrPassword).should('have.text','Передан неправильный логин или пароль');
     })
 
     it('', () => {
-        cy.get(selLogin.inputEmail).type('pinchuk.dap@gmail.com');
-        cy.get(selLogin.inputPassword).type('dmss111278DAP@@@');
+        cy.get(selLogin.inputEmail).type(testDataLog.validLogin);
+        cy.get(selLogin.inputPassword).type(testDataLog.wrongPassword);
         cy.get(selLogin.btnEnter).click();
         cy.get(selLogin.wrongLoginOrPassword).should('have.text','Передан неправильный логин или пароль');
     })
 
     it('', () => {
-        cy.get(selLogin.inputEmail).type('pinchuk.dap@gmail.com');
+        cy.get(selLogin.inputEmail).type(testDataLog.validLogin);
         cy.get(selLogin.inputPassword).type(' ');
         cy.get(selLogin.btnEnter).click();
         cy.get(selLogin.divLabelPassword).parent().find('span').eq(1).should('have.text', 'Введи пароль, чтобы продолжить');
@@ -77,15 +78,15 @@ context('', () => {
     })
 
     it('', () => {
-        cy.get(selLogin.inputEmail).type('email....!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!...500symbols@gmail.com');
-        cy.get(selLogin.inputPassword).type('password_500_symbols$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
+        cy.get(selLogin.inputEmail).type(testDataLog.longLogin);
+        cy.get(selLogin.inputPassword).type(testDataLog.longPassword);
         cy.get(selLogin.btnEnter).click();
         cy.get(selLogin.wrongLoginOrPassword).should('have.text','Передан неправильный логин или пароль');
 
     })
     it('', () => {
-        cy.get(selLogin.inputEmail).type('pinchuk.dap@gmail.com');
-        cy.get(selLogin.inputPassword).type('dmss111278DAP!!!');
+        cy.get(selLogin.inputEmail).type(testDataLog.validLogin);
+        cy.get(selLogin.inputPassword).type(testDataLog.validPassword);
         cy.get(selLogin.btnEye).click();
         cy.get(selLogin.inputPassword).invoke('attr', 'type').should('contain', 'text')
     })

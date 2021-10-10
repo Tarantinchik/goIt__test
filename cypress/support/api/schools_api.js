@@ -77,3 +77,20 @@ Cypress.Commands.add('createCourse', (accessToken, name, imageLink, schoolId) =>
         return response.body.courseId;
     });
 })
+
+Cypress.Commands.add('getCourseBySchoolId', (accessToken, schoolId) => {
+    cy.request({
+        method: 'GET',
+        url: 'https://lms-test.goit-backend.com/api/v1/course/list',
+        headers: {
+            Authorization: 'Bearer ' + accessToken,
+            'Content-Type': 'application/json'
+        },
+        body: {
+            schoolId: schoolId
+        }
+
+    }).then(response => {
+        return response.body.success;
+    });
+})

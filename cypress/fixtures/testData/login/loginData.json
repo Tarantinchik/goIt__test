@@ -1,0 +1,14 @@
+{
+  "validLogin": "pinchuk.dap@gmail.com",
+  "validPassword": "dmss111278DAP!!!",
+
+  "wrongLogin": "unknown_user@test.test",
+  "wrongPassword": "dmss111278DAP@@@",
+
+  "longLogin": "email....!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!...500symbols@gmail.com",
+  "longPassword": "password_500_symbols$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+
+
+
+}
+
