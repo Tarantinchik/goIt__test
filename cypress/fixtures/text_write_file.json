@@ -2,396 +2,40 @@
   "body": {
     "success": true,
     "error": "ok",
-    "schools": [
+    "courses": [
       {
-        "id": 88701,
-        "name": "School_1633177041125",
-        "description": "desc3322",
+        "id": 92911,
+        "name": "Course_1633366118755",
         "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
+        "schoolId": 70923,
+        "schoolName": "School number One"
       },
       {
-        "id": 87327,
-        "name": "School_1633109672330",
-        "description": "desc3322",
+        "id": 92910,
+        "name": "Course_1633364641007",
         "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
+        "schoolId": 70923,
+        "schoolName": "School number One"
       },
       {
-        "id": 87326,
-        "name": "School_1633109630823",
-        "description": "desc3322",
+        "id": 92855,
+        "name": "Course_1633364421566",
         "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
+        "schoolId": 70923,
+        "schoolName": "School number One"
       },
       {
-        "id": 87325,
-        "name": "School_1633109521682",
-        "description": "desc3322",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 87271,
-        "name": "School_1633108840804",
-        "description": "desc3322",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 84576,
-        "name": "School_1632928374240",
-        "description": "desc3322",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 84575,
-        "name": "School_1632928364877",
-        "description": "desc3322",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 84539,
-        "name": "School_09292021",
-        "description": "desc3322",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 84517,
-        "name": "School_322233",
-        "description": "School_322233",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 83384,
-        "name": "School_20112345",
-        "description": "Online lessons",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 78436,
-        "name": "School_197714101111",
-        "description": "OnlineLessons",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 78435,
-        "name": "School_19771410",
-        "description": "OnlineLessons",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 71374,
-        "name": "Название школы",
-        "description": "Описание школы!",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/82001e70-da3a-3e3e-b1f8-54a7746312ec.jpg",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [
-          {
-            "id": 71599,
-            "name": "Украина",
-            "schoolId": 71374,
-            "branchInfos": [
-              {
-                "id": 71611,
-                "name": "Филиал 1",
-                "city": "Винница",
-                "address": "1234567890",
-                "phoneNumber": "123456",
-                "countryId": 71599,
-                "courseInfos": null,
-                "tutorInfos": null,
-                "mentorInfos": null,
-                "chmInfos": null
-              },
-              {
-                "id": 71612,
-                "name": "Филиал 2",
-                "city": "Винница",
-                "address": "1234567890",
-                "phoneNumber": "123456",
-                "countryId": 71599,
-                "courseInfos": null,
-                "tutorInfos": null,
-                "mentorInfos": null,
-                "chmInfos": null
-              },
-              {
-                "id": 72816,
-                "name": "123",
-                "city": "Винница",
-                "address": "1234567890",
-                "phoneNumber": "111111",
-                "countryId": 71599,
-                "courseInfos": null,
-                "tutorInfos": null,
-                "mentorInfos": null,
-                "chmInfos": null
-              }
-            ]
-          },
-          {
-            "id": 71601,
-            "name": "Украинна",
-            "schoolId": 71374,
-            "branchInfos": []
-          },
-          {
-            "id": 71600,
-            "name": "Україна",
-            "schoolId": 71374,
-            "branchInfos": []
-          }
-        ],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 71027,
-        "name": "School for demo",
-        "description": "Demo school",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/82001e70-da3a-3e3e-b1f8-54a7746312ec.jpg",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [
-          {
-            "id": 71028,
-            "name": "Ukraine",
-            "schoolId": 71027,
-            "branchInfos": [
-              {
-                "id": 71029,
-                "name": "Kyiv",
-                "city": "Kyin",
-                "address": "test address",
-                "phoneNumber": "112232442",
-                "countryId": 71028,
-                "courseInfos": null,
-                "tutorInfos": null,
-                "mentorInfos": null,
-                "chmInfos": null
-              }
-            ]
-          }
-        ],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 70923,
-        "name": "School number One",
-        "description": "School number One",
+        "id": 70926,
+        "name": "Course number One",
         "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/6198806d-003d-340a-8ba0-bc7d81ff285b.jpg",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [
-          {
-            "id": 70924,
-            "name": "Украина",
-            "schoolId": 70923,
-            "branchInfos": [
-              {
-                "id": 70931,
-                "name": "Branch number One",
-                "city": "Киев",
-                "address": "Киев, 1234567890",
-                "phoneNumber": "777777",
-                "countryId": 70924,
-                "courseInfos": null,
-                "tutorInfos": null,
-                "mentorInfos": null,
-                "chmInfos": null
-              }
-            ]
-          }
-        ],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 70573,
-        "name": "Школа Новая",
-        "description": "Описание",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/fd6d88ef-ea78-39a2-9555-8330d1db3f82.jpg",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [
-          {
-            "id": 70792,
-            "name": "украина",
-            "schoolId": 70573,
-            "branchInfos": [
-              {
-                "id": 70793,
-                "name": "Филиал  в киеве",
-                "city": "киев",
-                "address": "",
-                "phoneNumber": "09909",
-                "countryId": 70792,
-                "courseInfos": null,
-                "tutorInfos": null,
-                "mentorInfos": null,
-                "chmInfos": null
-              }
-            ]
-          }
-        ],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 70543,
-        "name": "GoIt Automation",
-        "description": "школа Людки",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/17d9f3ca-a320-394e-9282-387f172a6e80.jpg",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [
-          {
-            "id": 70544,
-            "name": "Польща",
-            "schoolId": 70543,
-            "branchInfos": [
-              {
-                "id": 84721,
-                "name": "Гоуит 2",
-                "city": "Познань",
-                "address": "",
-                "phoneNumber": "+88666",
-                "countryId": 70544,
-                "courseInfos": null,
-                "tutorInfos": null,
-                "mentorInfos": null,
-                "chmInfos": null
-              },
-              {
-                "id": 70545,
-                "name": "Познань GOIT",
-                "city": "Познань",
-                "address": "",
-                "phoneNumber": "+4433333",
-                "countryId": 70544,
-                "courseInfos": null,
-                "tutorInfos": null,
-                "mentorInfos": null,
-                "chmInfos": null
-              }
-            ]
-          },
-          {
-            "id": 73507,
-            "name": "смсм",
-            "schoolId": 70543,
-            "branchInfos": []
-          }
-        ],
-        "schoolSuperAdmins": null
-      },
-      {
-        "id": 70512,
-        "name": "Школа Виктора",
-        "description": "Школа Виктора. Ломать - не строить)",
-        "imageLink": "https://s3.eu-north-1.amazonaws.com/lms.goit.files/b3ab08e1-1204-3fff-9d2c-a9f4d16142d9.jpg",
-        "domain": null,
-        "colors": null,
-        "countryInfos": [
-          {
-            "id": 70513,
-            "name": "Україна",
-            "schoolId": 70512,
-            "branchInfos": [
-              {
-                "id": 70514,
-                "name": "Вінницький Офіс",
-                "city": "Вінниця",
-                "address": "миколи оводова 46",
-                "phoneNumber": "09799449949494",
-                "countryId": 70513,
-                "courseInfos": null,
-                "tutorInfos": null,
-                "mentorInfos": null,
-                "chmInfos": null
-              },
-              {
-                "id": 70515,
-                "name": "Київський офіс",
-                "city": "Київ",
-                "address": "вулиця Данила Нечая 10",
-                "phoneNumber": "0972332323",
-                "countryId": 70513,
-                "courseInfos": null,
-                "tutorInfos": null,
-                "mentorInfos": null,
-                "chmInfos": null
-              }
-            ]
-          },
-          {
-            "id": 72413,
-            "name": "USA",
-            "schoolId": 70512,
-            "branchInfos": []
-          },
-          {
-            "id": 72582,
-            "name": "Украинна",
-            "schoolId": 70512,
-            "branchInfos": []
-          },
-          {
-            "id": 72581,
-            "name": "Українна",
-            "schoolId": 70512,
-            "branchInfos": []
-          }
-        ],
-        "schoolSuperAdmins": null
+        "schoolId": 70923,
+        "schoolName": "School number One"
       }
     ]
   },
   "headers": {
     "server": "nginx/1.14.0 (Ubuntu)",
-    "date": "Sat, 02 Oct 2021 12:55:05 GMT",
+    "date": "Mon, 11 Oct 2021 16:37:51 GMT",
     "content-type": "application/json",
     "transfer-encoding": "chunked",
     "connection": "keep-alive",
@@ -411,31 +55,31 @@
   "isOkStatusCode": true,
   "requestHeaders": {
     "Connection": "keep-alive",
-    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXBlcl9hZG1pbiIsInJvbGVzIjpbIlNVUEVSX0FETUlOIl0sImV4cCI6MTYzMzE4MjkwNX0.VcE1zBVUWMI41vQDjVuYgcIwaF6rcaPY_jRnx1ap8IDBOHJ4wfXuv1O5tgeMJJ7EEt6R4NvFe08Cza5S3_Adcw",
+    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXBlcl9hZG1pbiIsInJvbGVzIjpbIlNVUEVSX0FETUlOIl0sImV4cCI6MTYzMzk3Mzg3MX0.H77Q1ZuezjHUMus8DhvbAW9cHZgG_d2HGU0tkC0TnX5qEOpSl7jSDZ66RtPAm42y5-7w9rcOKydl3RArkR-gfA",
     "Content-Type": "application/json",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36",
     "accept": "*/*",
-    "cookie": "refreshToken=31973c06-d7d8-4e66-a902-0d8ea98c3d9a",
+    "cookie": "refreshToken=831cd653-7f15-4c2a-9c42-3868a418dc86",
     "accept-encoding": "gzip, deflate"
   },
-  "duration": 168,
+  "duration": 166,
   "allRequestResponses": [
     {
       "Request Body": null,
       "Request Headers": {
         "Connection": "keep-alive",
-        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXBlcl9hZG1pbiIsInJvbGVzIjpbIlNVUEVSX0FETUlOIl0sImV4cCI6MTYzMzE4MjkwNX0.VcE1zBVUWMI41vQDjVuYgcIwaF6rcaPY_jRnx1ap8IDBOHJ4wfXuv1O5tgeMJJ7EEt6R4NvFe08Cza5S3_Adcw",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXBlcl9hZG1pbiIsInJvbGVzIjpbIlNVUEVSX0FETUlOIl0sImV4cCI6MTYzMzk3Mzg3MX0.H77Q1ZuezjHUMus8DhvbAW9cHZgG_d2HGU0tkC0TnX5qEOpSl7jSDZ66RtPAm42y5-7w9rcOKydl3RArkR-gfA",
         "Content-Type": "application/json",
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36",
         "accept": "*/*",
-        "cookie": "refreshToken=31973c06-d7d8-4e66-a902-0d8ea98c3d9a",
+        "cookie": "refreshToken=831cd653-7f15-4c2a-9c42-3868a418dc86",
         "accept-encoding": "gzip, deflate"
       },
-      "Request URL": "https://lms-test.goit-backend.com/api/v1/school/list",
-      "Response Body": "{\"success\":true,\"error\":\"ok\",\"schools\":[{\"id\":88701,\"name\":\"School_1633177041125\",\"description\":\"desc3322\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":87327,\"name\":\"School_1633109672330\",\"description\":\"desc3322\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":87326,\"name\":\"School_1633109630823\",\"description\":\"desc3322\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":87325,\"name\":\"School_1633109521682\",\"description\":\"desc3322\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":87271,\"name\":\"School_1633108840804\",\"description\":\"desc3322\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":84576,\"name\":\"School_1632928374240\",\"description\":\"desc3322\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":84575,\"name\":\"School_1632928364877\",\"description\":\"desc3322\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":84539,\"name\":\"School_09292021\",\"description\":\"desc3322\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":84517,\"name\":\"School_322233\",\"description\":\"School_322233\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":83384,\"name\":\"School_20112345\",\"description\":\"Online lessons\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":78436,\"name\":\"School_197714101111\",\"description\":\"OnlineLessons\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":78435,\"name\":\"School_19771410\",\"description\":\"OnlineLessons\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"domain\":null,\"colors\":null,\"countryInfos\":[],\"schoolSuperAdmins\":null},{\"id\":71374,\"name\":\"Название школы\",\"description\":\"Описание школы!\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/82001e70-da3a-3e3e-b1f8-54a7746312ec.jpg\",\"domain\":null,\"colors\":null,\"countryInfos\":[{\"id\":71599,\"name\":\"Украина\",\"schoolId\":71374,\"branchInfos\":[{\"id\":71611,\"name\":\"Филиал 1\",\"city\":\"Винница\",\"address\":\"1234567890\",\"phoneNumber\":\"123456\",\"countryId\":71599,\"courseInfos\":null,\"tutorInfos\":null,\"mentorInfos\":null,\"chmInfos\":null},{\"id\":71612,\"name\":\"Филиал 2\",\"city\":\"Винница\",\"address\":\"1234567890\",\"phoneNumber\":\"123456\",\"countryId\":71599,\"courseInfos\":null,\"tutorInfos\":null,\"mentorInfos\":null,\"chmInfos\":null},{\"id\":72816,\"name\":\"123\",\"city\":\"Винница\",\"address\":\"1234567890\",\"phoneNumber\":\"111111\",\"countryId\":71599,\"courseInfos\":null,\"tutorInfos\":null,\"mentorInfos\":null,\"chmInfos\":null}]},{\"id\":71601,\"name\":\"Украинна\",\"schoolId\":71374,\"branchInfos\":[]},{\"id\":71600,\"name\":\"Україна\",\"schoolId\":71374,\"branchInfos\":[]}],\"schoolSuperAdmins\":null},{\"id\":71027,\"name\":\"School for demo\",\"description\":\"Demo school\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/82001e70-da3a-3e3e-b1f8-54a7746312ec.jpg\",\"domain\":null,\"colors\":null,\"countryInfos\":[{\"id\":71028,\"name\":\"Ukraine\",\"schoolId\":71027,\"branchInfos\":[{\"id\":71029,\"name\":\"Kyiv\",\"city\":\"Kyin\",\"address\":\"test address\",\"phoneNumber\":\"112232442\",\"countryId\":71028,\"courseInfos\":null,\"tutorInfos\":null,\"mentorInfos\":null,\"chmInfos\":null}]}],\"schoolSuperAdmins\":null},{\"id\":70923,\"name\":\"School number One\",\"description\":\"School number One\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/6198806d-003d-340a-8ba0-bc7d81ff285b.jpg\",\"domain\":null,\"colors\":null,\"countryInfos\":[{\"id\":70924,\"name\":\"Украина\",\"schoolId\":70923,\"branchInfos\":[{\"id\":70931,\"name\":\"Branch number One\",\"city\":\"Киев\",\"address\":\"Киев, 1234567890\",\"phoneNumber\":\"777777\",\"countryId\":70924,\"courseInfos\":null,\"tutorInfos\":null,\"mentorInfos\":null,\"chmInfos\":null}]}],\"schoolSuperAdmins\":null},{\"id\":70573,\"name\":\"Школа Новая\",\"description\":\"Описание\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/fd6d88ef-ea78-39a2-9555-8330d1db3f82.jpg\",\"domain\":null,\"colors\":null,\"countryInfos\":[{\"id\":70792,\"name\":\"украина\",\"schoolId\":70573,\"branchInfos\":[{\"id\":70793,\"name\":\"Филиал  в киеве\",\"city\":\"киев\",\"address\":\"\",\"phoneNumber\":\"09909\",\"countryId\":70792,\"courseInfos\":null,\"tutorInfos\":null,\"mentorInfos\":null,\"chmInfos\":null}]}],\"schoolSuperAdmins\":null},{\"id\":70543,\"name\":\"GoIt Automation\",\"description\":\"школа Людки\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/17d9f3ca-a320-394e-9282-387f172a6e80.jpg\",\"domain\":null,\"colors\":null,\"countryInfos\":[{\"id\":70544,\"name\":\"Польща\",\"schoolId\":70543,\"branchInfos\":[{\"id\":84721,\"name\":\"Гоуит 2\",\"city\":\"Познань\",\"address\":\"\",\"phoneNumber\":\"+88666\",\"countryId\":70544,\"courseInfos\":null,\"tutorInfos\":null,\"mentorInfos\":null,\"chmInfos\":null},{\"id\":70545,\"name\":\"Познань GOIT\",\"city\":\"Познань\",\"address\":\"\",\"phoneNumber\":\"+4433333\",\"countryId\":70544,\"courseInfos\":null,\"tutorInfos\":null,\"mentorInfos\":null,\"chmInfos\":null}]},{\"id\":73507,\"name\":\"смсм\",\"schoolId\":70543,\"branchInfos\":[]}],\"schoolSuperAdmins\":null},{\"id\":70512,\"name\":\"Школа Виктора\",\"description\":\"Школа Виктора. Ломать - не строить)\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/b3ab08e1-1204-3fff-9d2c-a9f4d16142d9.jpg\",\"domain\":null,\"colors\":null,\"countryInfos\":[{\"id\":70513,\"name\":\"Україна\",\"schoolId\":70512,\"branchInfos\":[{\"id\":70514,\"name\":\"Вінницький Офіс\",\"city\":\"Вінниця\",\"address\":\"миколи оводова 46\",\"phoneNumber\":\"09799449949494\",\"countryId\":70513,\"courseInfos\":null,\"tutorInfos\":null,\"mentorInfos\":null,\"chmInfos\":null},{\"id\":70515,\"name\":\"Київський офіс\",\"city\":\"Київ\",\"address\":\"вулиця Данила Нечая 10\",\"phoneNumber\":\"0972332323\",\"countryId\":70513,\"courseInfos\":null,\"tutorInfos\":null,\"mentorInfos\":null,\"chmInfos\":null}]},{\"id\":72413,\"name\":\"USA\",\"schoolId\":70512,\"branchInfos\":[]},{\"id\":72582,\"name\":\"Украинна\",\"schoolId\":70512,\"branchInfos\":[]},{\"id\":72581,\"name\":\"Українна\",\"schoolId\":70512,\"branchInfos\":[]}],\"schoolSuperAdmins\":null}]}",
+      "Request URL": "https://lms-test.goit-backend.com/api/v1/course/list?schoolId=70923",
+      "Response Body": "{\"success\":true,\"error\":\"ok\",\"courses\":[{\"id\":92911,\"name\":\"Course_1633366118755\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"schoolId\":70923,\"schoolName\":\"School number One\"},{\"id\":92910,\"name\":\"Course_1633364641007\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"schoolId\":70923,\"schoolName\":\"School number One\"},{\"id\":92855,\"name\":\"Course_1633364421566\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/5894c684-4841-3707-85a9-c90b6a051303.png\",\"schoolId\":70923,\"schoolName\":\"School number One\"},{\"id\":70926,\"name\":\"Course number One\",\"imageLink\":\"https://s3.eu-north-1.amazonaws.com/lms.goit.files/6198806d-003d-340a-8ba0-bc7d81ff285b.jpg\",\"schoolId\":70923,\"schoolName\":\"School number One\"}]}",
       "Response Headers": {
         "server": "nginx/1.14.0 (Ubuntu)",
-        "date": "Sat, 02 Oct 2021 12:55:05 GMT",
+        "date": "Mon, 11 Oct 2021 16:37:51 GMT",
         "content-type": "application/json",
         "transfer-encoding": "chunked",
         "connection": "keep-alive",

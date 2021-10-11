@@ -32,7 +32,7 @@ Cypress.Commands.add('changeAccountPage', (userName, userPassword) => {
     cy.get(selLogin.inputEmail).type(userName );
     cy.get(selLogin.inputPassword).type(userPassword);
     cy.get(selLogin.btnEnter).should('have.text', 'Войти').click();
-    cy.wait(5000);
+    cy.wait(10000);
     cy.get('a[href="/profile"]').click();
     cy.findByText('Выйти').click();
 
@@ -125,10 +125,15 @@ Cypress.Commands.add('createCourseByAPI', (name, imageLink, schoolId) => {
 
 
 Cypress.Commands.add('getCoursesListBySchoolAPI', (schoolId) => {
+
     cy.getTokenByAPI().then(accessToken => {
-        cy.getCourseBySchoolId(accessToken, schoolId).then(item => {
-            cy.log(schoolId)
-            cy.log(item)
-        })
-    })
+        // let courseIdList = [];
+        cy.getCoursesBySchoolId(accessToken, schoolId).then(courseList => {
+            let courseIdList = [];
+           courseList.forEach(course => {
+               courseIdList.push(course['id'])
+           });
+           return courseIdList;
+        });
+    });
 });

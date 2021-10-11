@@ -21,11 +21,16 @@ afterEach(() => {
 
 
 context('GetCourseList', () => {
-    const schoolName = 'School_19771410';
+    const schoolName = 'School number One';
 
-    it('.get course list by school API', () => {
+    it('.get courses list by school API', () => {
         cy.getSchoolIdByNameByAPI(schoolName).then(schoolId => {
-            cy.getCoursesListBySchoolAPI(schoolId)
+            cy.getCoursesListBySchoolAPI(schoolId).then(courseIdList => {
+               console.log(courseIdList);
+               // courseList.forEach(course => {
+               //     cy.log(course['id']);
+               // })
+            });
         });
     });
 });

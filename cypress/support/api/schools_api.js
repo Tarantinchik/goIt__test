@@ -78,19 +78,16 @@ Cypress.Commands.add('createCourse', (accessToken, name, imageLink, schoolId) =>
     });
 })
 
-Cypress.Commands.add('getCourseBySchoolId', (accessToken, schoolId) => {
+Cypress.Commands.add('getCoursesBySchoolId', (accessToken, schoolId) => {
     cy.request({
         method: 'GET',
-        url: 'https://lms-test.goit-backend.com/api/v1/course/list',
+        url: 'https://lms-test.goit-backend.com/api/v1/course/list?schoolId=' + schoolId,
         headers: {
             Authorization: 'Bearer ' + accessToken,
             'Content-Type': 'application/json'
         },
-        body: {
-            schoolId: schoolId
-        }
-
     }).then(response => {
-        return response.body.success;
+          return response.body.courses;
+        // cy.writeFile( 'cypress/fixtures/text_write_file.json',  response,  'utf8');
     });
 })
